@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajiv Dhiman | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            max-width: 100%;
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .subtitle { font-size: 1.25rem; color: var(--secondary); max-width: 600px; }
+
+        /* Experience & Projects */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .date { font-size: 0.875rem; color: var(--primary); font-weight: 600; }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-info {
+            text-align: center;
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+        }
+
+        .contact-info a { color: var(--accent); text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">RD.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero visible">
+        <h1>RAJIV DHIMAN</h1>
+        <p class="subtitle">Computer Engineer & Web Developer with a strong background in Administrative Operations.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="margin-top: 1rem; font-size: 1.1rem; color: var(--secondary);">
+            Ambitious learner with a unique mix of technical expertise and practical administrative experience. Passionate about applying computer engineering knowledge to contribute effectively to organizational growth and efficiency.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical & Professional Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Web Development (HTML5, CSS3, JS)</span>
+            <span class="skill-tag">PHP & MySQL</span>
+            <span class="skill-tag">MS Office (Excellent Command)</span>
+            <span class="skill-tag">CBSE School Operations</span>
+            <span class="skill-tag">Database Management (cPanel)</span>
+            <span class="skill-tag">Document Coordination</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Continuous Learning</span>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="card-grid">
+            <div class="card">
+                <span class="date">July 2024 - Oct 2025</span>
+                <h3>Administrative Clerk</h3>
+                <p><strong>F. S. Convent School, Pillukhera</strong></p>
+                <p>Specialized in CBSE school operations, LOC filling, direct admissions, and exam formatting.</p>
+            </div>
+            <div class="card">
+                <span class="date">Feb 2022 - June 2024</span>
+                <h3>Computer Teacher</h3>
+                <p><strong>Dev Computer & Vocational Institute</strong></p>
+                <p>Delivered comprehensive education in programming, web development, and digital literacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Key Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <span class="date">Dec 2023 - June 2024</span>
+                <h3>Institute Web Platform</h3>
+                <p>Developed a responsive website using HTML5, CSS3, JavaScript, PHP, and MySQL. Implemented efficient management through cPanel and improved online presence.</p>
+            </div>
+            <div class="card">
+                <h3>Digital Record-Keeping</h3>
+                <p>Expertly managed digital and physical records, enhancing communication management and organizational processes within school administration.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Ready to collaborate or discuss opportunities?</p>
+            <p style="margin-top: 2rem;">
+                Email: <a href="mailto:rjvdhimaan@gmail.com">rjvdhimaan@gmail.com</a><br>
+                Phone: +91 70274 57266<br>
+                Location: V.P.O. Kandela, Jind, HR 126125
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Animation Trigger
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
